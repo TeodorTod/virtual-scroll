@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgOptimizedImage } from '@angular/common';
+import { provideImageKitLoader } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialExampleModule } from 'src/material.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -10,9 +15,14 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    NgOptimizedImage,
+    BrowserAnimationsModule,
+    MaterialExampleModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    provideImageKitLoader("https://ik.imagekit.io/arungudelli/")
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
