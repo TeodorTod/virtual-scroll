@@ -10,7 +10,7 @@ export class PetService {
   pets: Observable<any> = this.http.get('https://petstore.swagger.io/v2/pet/findByStatus?status=available')
   .pipe(map((result: any) => {
     result.map((item: any, index: number) => {
-      item.photoUrls = [(index + 1) + "-" + "4000x3000_ag.jpg", (Math.ceil(index % 20) + 1) + "-" + "4000x3000_ag.jpg"]
+      item.photoUrls = [(index + 1) + "-" + "4000x3000_ag.jpg", (Math.ceil(index % 20) + 2) + "-" + "4000x3000_ag.jpg"]
     })
     return result;
   }));

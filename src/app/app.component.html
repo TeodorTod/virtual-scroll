@@ -1,27 +1,17 @@
 <div class="main">
-<ng-container *ngFor="let img of petService.pets | async">
-      
+  <ng-container *ngFor="let img of petService.pets | async">
+
     <mat-card class="example-card">
       <mat-card-header>
         <div mat-card-avatar class="example-header-image">
-          <img
-          [ngSrc]="img.photoUrls[1]" 
-          width="150" 
-          height="150" 
-      
-          ngSrcset="150w"
-         mat-card-image alt="Photo of a Shiba Inu">
-         </div>
+          <img [ngSrc]="img.photoUrls[1]" width="150" height="150" ngSrcset="150w" mat-card-image
+            alt="Photo of a Shiba Inu">
+        </div>
         <mat-card-title>Shiba Inu</mat-card-title>
         <mat-card-subtitle>Dog Breed</mat-card-subtitle>
       </mat-card-header>
-      <img
-        [ngSrc]="img.photoUrls[0]" 
-        width="4000" 
-        height="3000" 
-    
-        ngSrcset="200w, 400w, 600w, 800w, 1000w, 1200w, 1600w, 2000w, 3000w"
-       mat-card-image alt="Photo of a Shiba Inu">
+      <img [ngSrc]="img.photoUrls[0]" width="4000" height="3000"
+        ngSrcset="200w, 400w, 600w, 800w, 1000w, 1200w, 1600w, 2000w, 3000w" mat-card-image alt="Photo of a Shiba Inu">
       <mat-card-content>
         <p>
           The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
@@ -29,9 +19,18 @@
           bred for hunting.
         </p>
       </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
+      <mat-card-actions class="socials">
+        <button mat-fab extended color="primary">
+          <mat-icon>favorite</mat-icon>
+          Like
+        </button>
+        <div class="buttons">
+          <button mat-icon-button matTooltip="Likes" color="primary" aria-label="Example icon-button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+          </button>
+            <h4>36 likes</h4>
+        </div>
+
       </mat-card-actions>
     </mat-card>
   </ng-container>

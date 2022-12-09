@@ -12,8 +12,8 @@ img{
   
   
   .example-header-image img {
-    width: 75px;
-    height: 45px;
+    width: 85px;
+    height: 40px;
   }
 .main {
   display: flex;
@@ -21,4 +21,22 @@ img{
   justify-content: center;
   flex-direction: column;
   width: 100%;
+}
+
+.buttons:first-child {
+  display: block;
+} 
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.buttons h4 {
+  margin: 0 0 0;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
 }
